@@ -1,9 +1,7 @@
 #최소 경로
 import sys
 
-'''
-SOLVE FUNCTION
-'''
+
 def solve(n):
     i = 0
     number = 0
