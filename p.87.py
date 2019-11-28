@@ -1,14 +1,26 @@
 import sys
 
-def solve(day, night, length):
-    if length >= day > night:
-        num = ((length - day) / (day - night)) + 1
-        if num - int(num) != 0:
-            return int(num) + 1
-        else:
-            return int(num)
-    else:
-        return -1
 
-a, b, c = map(int,sys.stdin.readline().split())
-print(solve(a, b, c))
+def solve(word):
+    word = word[0:len(word) - 1]
+    flag = [False] * 30
+    saved = -1
+    for c in word:
+        index = ord(c) - ord('a')
+        if flag[index]:
+            return False
+        elif saved != -1 and saved != index:
+            flag[saved] = True
+        else:
+            saved = index
+
+    return True
+
+
+n = int(sys.stdin.readline())
+ans = 0
+for i in range(0, n):
+    if solve(sys.stdin.readline()):
+        ans += 1
+
+print(ans)
