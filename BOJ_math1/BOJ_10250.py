@@ -24,7 +24,22 @@ def hotel(h, w, n):
     else:
         return -1
 
+def hotel_2(h, w, n):
+    if 1 <= h <= 99 and 1 <= w <= 99 and 1 <= n <= h * w:
+        if n % h == 0:
+            level = h
+        else:
+            level = n % h
+        if n % h == 0:
+            num = n // h
+        else:
+            num = n // h + 1
+        room = 100 * level + num
+        return room
+    else:
+        return -1
+
 test = int(sys.stdin.readline())
 for i in range(test):
     a, b, c = map(int,sys.stdin.readline().split())
-    print(hotel(a, b, c))
+    print(hotel_2(a, b, c))
