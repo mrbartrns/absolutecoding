@@ -23,7 +23,7 @@ def hotel(h, w, n):
         return room
     else:
         return -1
-
+#시간 복잡도 O(n), 수정완료
 def hotel_2(h, w, n):
     if 1 <= h <= 99 and 1 <= w <= 99 and 1 <= n <= h * w:
         if n % h == 0:
