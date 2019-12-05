@@ -1,5 +1,6 @@
-#에네토스테리스의 채 응용, 베르트랑 공준
+# 에네토스테리스의 채 응용, 베르트랑 공준
 import sys
+
 
 def prime_list(n):
     flag = [True] * (2 * n + 1)
@@ -10,8 +11,9 @@ def prime_list(n):
             for j in range(i + i, 2 * n + 1, i):
                 flag[j] = False
 
-    lst1 = [i for i in range(n + 1 , 2 * n + 1) if flag[i] == True]
+    lst1 = [i for i in range(n + 1, 2 * n + 1) if flag[i] == True]
     return len(lst1)
+
 
 chk = True
 while chk:
