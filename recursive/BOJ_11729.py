@@ -11,4 +11,4 @@ def func(n):
         func(n - 1)
 
 #수정중
-func(2)
+func(5)
