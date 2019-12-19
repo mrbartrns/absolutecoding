@@ -9,7 +9,7 @@
 """
 import sys
 class Queue:
-    # 리스트의 초기값
+    # 리스트의 초기값 (리스트의 초기값은 항상 비어있음)
     def __init__(self):
         self.items = []
 
@@ -19,7 +19,7 @@ class Queue:
             return -1
         else:
             self.items.pop(0)
-    #  큐에서 요소 추가, insert(0, n)을 사용해도 무방함
+    #  큐에서 요소 추가, insert(0, n)을 사용해도 무방함, 대신 pop()을 사용하여 마지막 값을 빼냄
     def Enqueue(self, n):
         self.items.append(n)
         pass
