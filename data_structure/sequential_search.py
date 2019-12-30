@@ -1,6 +1,7 @@
 # 순차탐색
 import sys
 
+
 def sequential_search1(arr, val):
     if len(arr) > 1:
         if arr[0] == val:
@@ -9,6 +10,7 @@ def sequential_search1(arr, val):
             sequential_search1(arr[1:], val)
     else:
         print(val, arr[0] == val)
+
 
 def sequential_search2(arr, val):
     num = 0
