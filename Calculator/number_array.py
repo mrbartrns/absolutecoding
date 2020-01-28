@@ -5,7 +5,7 @@ import math
 
 class result:
     def __init__(self):
-        self.result = []
+        self.result = [0]
 
     def save_result(self, number):
         self.result = [number]
@@ -32,6 +32,7 @@ def welcome():
     print("#" * len(welcome_string) + "\n")
 
 
+# Todo: 받는 숫자의 갯수에 상관 없이 계산 진행. 또한 숫자가 하나일 경우 저장된 결과와 연산해야 함.
 def run_calculator():
     welcome()
     running = True
