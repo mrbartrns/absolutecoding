@@ -8,7 +8,7 @@ class result:
         self.result = []
 
     def save_result(self, number):
-        self.result.append(number)
+        self.result = [number]
 
     def __repr__(self):
         return str(self.result)
@@ -47,10 +47,12 @@ def run_calculator():
                 addnum.add()
                 number_save.save_result(addnum.add())
                 print(addnum.add())
-                running = False
-
+                yes_or_no = input('계속하시려면 yes를, 끝내시려면 no를 입력하여 주십시오: ')
+                if yes_or_no == 'no':
+                    running = False
         except:
             break
     print(number_save)
+
 
 run_calculator()
