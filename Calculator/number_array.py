@@ -43,7 +43,7 @@ def run_calculator():
     welcome()
     running = True
     number_save = result()  # 숫자를 받아서 결과값을 반환하는 객체
-
+    # Todo: 저장된 값이 0일때 및 0이 아닐때를 구별하여, 0이 아닐 때에는 부호와 숫자만 입력받아도 계산이 가능하도록 할 것.
     while running:
         num1 = int(input("숫자를 입력하여 주십시오: "))
         input_sign = input("부호를 결정하여 주십시오: ")
